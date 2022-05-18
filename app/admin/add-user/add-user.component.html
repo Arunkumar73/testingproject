@@ -1,0 +1,262 @@
+<body
+  style="
+    background-image: url('https://th.bing.com/th/id/OIP.4mo48MU_wPAFsfHYKce9pQHaDL?w=289&h=150&c=7&r=0&o=5&pid=1.7');
+  "
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+  <h1><u>Welcome to Add New Employee</u></h1>
+  <div class="col-md-3 border-left">
+    <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+      <img class="rounded-circle mt-5" [src]="url" width="120" height="80px" />
+    </div>
+    <div class="d-flex">
+      <input
+        style="display: none"
+        type="file"
+        (change)="selectFile($event)"
+        #fileinput
+      />
+      <button type="button" (click)="fileinput.click()" class="brwsbtn">
+        Browse
+      </button>
+      <button type="button" class="upldbtn">Upload</button>
+    </div>
+  </div>
+
+  <div class="col-md-8">
+    <div class="p-3 py-5">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="d-flex flex-row align-items-center back">
+          <i class="fa fa-long-arrow-left mr-1 mb-1"></i>
+          <h5 routerLink="/admin"><u>Back to home</u></h5>
+        </div>
+      </div>
+      <form [formGroup]="signupform" >
+        <div class="row mt-2">
+          <div class="col-md-6">
+            <label class="lab">FirstName</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="first name"
+              formControlName="Fname"
+              value=""
+              maxlength="20"
+              minlength="3"
+              pattern="^[a-zA-Z_-]$"
+
+            />
+            <div class="val" *ngIf="signupform.controls['Fname'].invalid && (signupform.controls['Fname'].dirty || signupform.controls['Fname'].touched)">
+              <div *ngIf="signupform.controls['Fname'].errors?.['required']">FirstName is required</div>
+              <div *ngIf="signupform.controls['Fname'].errors?.['minlength']">minlength is required</div>
+              <div *ngIf="signupform.controls['Fname'].errors?.['pattern']">pattern not matched</div>
+             </div>
+          </div>
+          <div class="col-md-6">
+            <label class="lab">LastName</label>
+            <input
+              type="text"
+              class="form-control"
+              value=""
+              placeholder="last name"
+              formControlName="Lname"
+              maxlength="20"
+              minlength="3"
+              pattern="^[a-zA-Z_-]$"
+            />
+            <div class="val" *ngIf="signupform.controls['Lname'].invalid && (signupform.controls['Lname'].dirty || signupform.controls['Lname'].touched)">
+              <div *ngIf="signupform.controls['Lname'].errors?.['required']">LastName is required</div>
+              <div *ngIf="signupform.controls['Lname'].errors?.['minlength']">minlength is required</div>
+              <div *ngIf="signupform.controls['Lname'].errors?.['pattern']">pattern not matched</div>
+             </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <label class="lab">Email Address</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Email"
+              value=""
+              formControlName="email"
+              maxlength="20"
+              minlength="3"
+              pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+$"
+            />
+            <div class="val" *ngIf="signupform.controls['email'].invalid && (signupform.controls['email'].dirty || signupform.controls['email'].touched)">
+              <div *ngIf="signupform.controls['email'].errors?.['required']">Email is required</div>
+              <div *ngIf="signupform.controls['email'].errors?.['minlength']">minlength is required</div>
+              <div *ngIf="signupform.controls['email'].errors?.['pattern']">pattern not matched</div>
+             </div>
+          </div>
+          <div class="col-md-6">
+            <label class="lab">Mobile</label>
+            <input
+              type="text"
+              class="form-control"
+              value=""
+              placeholder="Phone number"
+              formControlName="mobile"
+              maxlength="10"
+              minlength="3"
+              pattern="^[0-9]+$"
+            />
+            <div class="val" *ngIf="signupform.controls['mobile'].invalid && (signupform.controls['mobile'].dirty || signupform.controls['mobile'].touched)">
+              <div *ngIf="signupform.controls['mobile'].errors?.['required']">Mobile is required</div>
+              <div *ngIf="signupform.controls['mobile'].errors?.['minlength']">minlength is required</div>
+              <div *ngIf="signupform.controls['mobile'].errors?.['pattern']">Only NUmbers</div>
+             </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <label class="lab">Address</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="address"
+              value=""
+              formControlName="address"
+              maxlength="20"
+              minlength="3"
+            />
+            <div class="val" *ngIf="signupform.controls['address'].invalid && (signupform.controls['address'].dirty || signupform.controls['address'].touched)">
+              <div *ngIf="signupform.controls['address'].errors?.['required']">Address is required</div>
+              <div *ngIf="signupform.controls['address'].errors?.['minlength']">minlength is required</div>
+             </div>
+          </div>
+          <div class="col-md-6">
+            <label class="lab">MapAddressLink</label>
+            <input
+              type="text"
+              class="form-control"
+              value=""
+              placeholder="MapAddressLink"
+              formControlName="MapAddressLink"
+              maxlength="20"
+              minlength="3"
+            />
+            <div class="val" *ngIf="signupform.controls['MapAddressLink'].invalid && (signupform.controls['MapAddressLink'].dirty || signupform.controls['MapAddressLink'].touched)">
+              <div *ngIf="signupform.controls['MapAddressLink'].errors?.['required']">MapAddressLink is required</div>
+              <div *ngIf="signupform.controls['MapAddressLink'].errors?.['minlength']">minlength is required</div>
+             </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <label class="lab">UserName</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="user_name"
+              value=""
+              formControlName="user_name"
+              maxlength="20"
+              minlength="3"
+            />
+            <div class="val" *ngIf="signupform.controls['user_name'].invalid && (signupform.controls['user_name'].dirty || signupform.controls['user_name'].touched)">
+              <div *ngIf="signupform.controls['user_name'].errors?.['required']">UserName is required</div>
+              <div *ngIf="signupform.controls['user_name'].errors?.['minlength']">minlength is required</div>
+             </div>
+          </div>
+          <div class="col-md-6">
+            <label class="lab">User Password</label>
+            <input
+              type="password"
+              class="form-control"
+              value=""
+              placeholder="user_password"
+              formControlName="user_password"
+              maxlength="20"
+              minlength="3"
+            />
+            <div class="val" *ngIf="signupform.controls['user_password'].invalid && (signupform.controls['user_password'].dirty || signupform.controls['user_password'].touched)">
+              <div *ngIf="signupform.controls['user_password'].errors?.['required']">User Password is required</div>
+              <div *ngIf="signupform.controls['user_password'].errors?.['minlength']">minlength is required</div>
+             </div>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <label class="lab">IsAdmin</label>
+            <select
+              class="form-select"
+              style="margin-left: 250px"
+              formControlName="IsAdmin"
+            >
+              <option value="" disabled selected hidden>IsAdmin</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+
+
+          <div class="col-md-6">
+            <label class="lab">UserType</label>
+            <select
+              class="form-select"
+              style="margin-left: 250px"
+              formControlName="type"
+            >
+              <option value="" disabled selected hidden>UserType</option>
+              <option>Admin</option>
+              <option>User</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <label class="lab">User Status</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="user_Status"
+              value=""
+              formControlName="user_status"
+              maxlength="20"
+              minlength="3"
+            />
+            <div class="val" *ngIf="signupform.controls['user_status'].invalid && (signupform.controls['user_status'].dirty || signupform.controls['user_status'].touched)">
+              <div *ngIf="signupform.controls['user_status'].errors?.['required']">User Status is required</div>
+
+             </div>
+          </div>
+          <div class="col-md-6">
+            <label class="lab">User Role</label>
+            <input
+              type="text"
+              class="form-control"
+              value=""
+              placeholder="user_Role"
+              formControlName="user_role"
+              maxlength="20"
+              minlength="3"
+            />
+            <div class="val" *ngIf="signupform.controls['user_role'].invalid && (signupform.controls['user_role'].dirty || signupform.controls['user_role'].touched)">
+              <div *ngIf="signupform.controls['user_role'].errors?.['required']">User role is required</div>
+
+             </div>
+          </div>
+        </div>
+
+        <div class="mt-5 text-right">
+          <button
+            class="btn btn-primary profile-button"
+            type="button"
+            (click)="SaveUser()">
+
+            Save Profile
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</body>

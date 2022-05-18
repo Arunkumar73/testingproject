@@ -1,0 +1,74 @@
+<body>
+  <div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+    <div class="card card0 border-0">
+      <div class="row d-flex">
+        <div class="col-lg-6">
+          <div class="card1 pb-5">
+            <div class="row">
+              <img
+                src="https://dcassetcdn.com/design_img/3658418/773027/773027_20939020_3658418_37deed0c_image.jpg"
+                class="logo"/>
+            </div>
+            <div class="row px-3 justify-content-center mt-4 mb-5 border-line">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnEFB7U-Tmk7qm9EkfzOE3TEB18F5cCcOsKg&usqp=CAU"
+                class="image"/>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card2 card border-0 px-4 py-5">
+            <div class="me-auto">
+              <h1><u> Axel One </u></h1>
+            </div>
+            <br />
+            <br />
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+              <div class="row px-3">
+                <label class="mb-1">
+                  <h6 class="mb-0 text-sm">UserName/Email</h6>
+                </label>
+                <input
+                  class="form-control"
+                  formControlName="userName"
+                  class="mb-4"
+                  type="text"
+                  name="username"
+                  placeholder="Email address/Username"/>
+              </div>
+
+              <div class="row px-3">
+                <label class="mb-1">
+                  <h6 class="mb-0 text-sm">Password</h6>
+                </label>
+                <input
+                  class="form-control"
+                  formControlName="password"
+                  type="password"
+                  name="password"
+                  placeholder="Enter password"/>
+              </div>
+              <br/>
+
+              <div class="row mb-3 px-3">
+                <button
+                  type="submit"
+                  class="btn btn-blue text-left" (onclick)="login()">
+                   LOGIN
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="bg-blue py-4">
+          <div class="row px-3">
+            <h3 class="ml-4 ml-sm-5 mb-2">
+              <marquee>"Talent wins games, but teamwork and intelligence win
+                championships."</marquee>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,85 @@
+<body
+  style="
+    background-image: url('https://th.bing.com/th/id/OIP.4mo48MU_wPAFsfHYKce9pQHaDL?w=289&h=150&c=7&r=0&o=5&pid=1.7');
+  ">
+  <button
+    type="button"
+    class="mod"
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal"
+    data-bs-whatever="@getbootstrap"
+  >
+    Add Employee Role
+  </button>
+  <br>
+  <br>
+  <h5 routerLink="/admin"><u>Back to home</u></h5>
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">
+            Welcome To Add Employee Role
+          </h4>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="addroleform">
+            <div >
+              <label for="Role_Id" class="col-form-label">Role Id:</label>
+              <input type="text" formControlName="role_Id" style="width: 465px;">
+            </div>
+            <div >
+              <label for="role_Uniqid" class="col-form-label">UniqueId:</label>
+              <input type="text" formControlName="role_Uniqid" style="width: 465px;">
+            </div>
+            <div>
+              <label for="role_Name" class="col-form-label">Role Name:</label>
+              <input type="text" formControlName="role_Name" style="width: 465px;">
+            </div>
+            <div>
+              <label for="Role Name" class="col-form-label">Role Type:</label>
+              <select class="form-select" formControlName="role_Type">
+
+                <option value="" disabled selected hidden> Role Type </option>
+                <option>Admin</option>
+                <option>FrontEnd </option>
+                <option>Both </option>
+              </select>
+            </div>
+
+            <div class="mb-0">
+              <label for="Role Status" class="col-form-label">Role Status:</label>
+              <select class="form-select" formControlName="role_Status">
+
+                <option value=""disabled selected hidden> RoleStatus </option>
+                <option>Y</option>
+                <option>D</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="close"
+            data-bs-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="save" (click)="saverole()">Save Role</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

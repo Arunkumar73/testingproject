@@ -1,0 +1,114 @@
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('https://cdn.hipwallpaper.com/i/31/76/E8FiYD.jpg');
+  height: 730px;
+  }
+
+  .card0 {
+    box-shadow: 0px 4px 8px 0px #757575;
+    border-radius: 20px
+  }
+
+
+  .logo {
+    width: 200px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 35px;
+
+  }
+
+  .image {
+    width: 500px;
+    height: 280px
+  }
+
+  .border-line {
+    border-right: 1px solid #052755
+  }
+
+
+  .text-sm {
+    font-size: 20px
+  }
+
+
+  input,
+  textarea {
+    padding: 10px 12px 10px 12px;
+    border: 1px solid rgb(22, 69, 139);
+    border-radius: 20px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #6e200d;
+    font-size: 14px;
+    letter-spacing: 1px
+  }
+
+  input:focus,
+  textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #f03f09;
+    outline-width: 0
+  }
+
+  button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+  }
+
+  a {
+    color: inherit;
+    cursor: pointer
+  }
+
+  .btn-blue {
+    background-color: #070b33;
+    width: 170px;
+    color: #fff;
+    border-radius: 20px;
+    margin-left: 250px;
+  }
+
+  .btn-blue:hover {
+    background-color: rgb(18, 143, 201);
+    cursor: pointer
+  }
+
+  .bg-blue {
+    color: #fff;
+    background-color: #0c7074
+  }
+
+  @media screen and (max-width: 991px) {
+    .logo {
+        margin-left: 0px
+    }
+
+    .image {
+        width: 300px;
+        height: 220px
+    }
+
+    .border-line {
+        border-right: none
+    }
+
+    .card2 {
+        border-top: 1px solid #EEEEEE !important;
+        margin: 0px 15px
+    }
+  }
+  h1{
+    margin-left: 200px;
+    color:#af0d0d;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+  }

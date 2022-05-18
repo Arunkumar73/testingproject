@@ -1,0 +1,91 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+
+
+</head>
+
+<body
+  style="
+    background-image: url('https://th.bing.com/th/id/OIP.4mo48MU_wPAFsfHYKce9pQHaDL?w=289&h=150&c=7&r=0&o=5&pid=1.7');
+  "
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-1 col-md-10">
+        <div class="panel">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-sm-50">
+                <h4 class="title">Employees <span>List</span></h4>
+              </div>
+              <div class="col-sm-9 col-xs-12 text-right">
+                <div class="btn_group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search here"
+                  />
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h5 routerLink="/admin"><u>Back to home</u></h5>
+          <pagination-controls
+            (pageChange)="p = $event"
+            class="pag"
+          ></pagination-controls>
+          <div class="panel-body table-responsive" >
+            <table class="table"  >
+              <thead>
+                <tr>
+                  <th>userid</th>
+                  <th>UserName</th>
+                  <th>mobile</th>
+                  <th>Email</th>
+                  <th>Address</th>
+                  <th>Status</th>
+                  <th>Type</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  *ngFor="let list of a | paginate: { itemsPerPage: 10, currentPage: p }" >
+                  <td>{{ list.user_Id }}</td>
+                  <td>{{ list.user_Username }}</td>
+                  <td>{{ list.user_Phone }}</td>
+                  <td>{{ list.user_Email }}</td>
+                  <td>{{ list.user_Address }}</td>
+                  <td>{{ list.user_Status }}</td>
+                  <td>{{ list.user_Type }}</td>
+
+                  <td>
+                    <ul class="action-list">
+                      <li>
+                        <a routerLink="/edit-profile" data-tip="edit">
+                          <i class="fa fa-edit"> </i>
+                        </a>
+                      </li>
+                      <li>
+                        <a routerLink="/view-users" data-tip="delete">
+                          <i
+                            class="fa fa-trash" (click)="deleteuser()">
+                          </i>
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

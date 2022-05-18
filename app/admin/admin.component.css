@@ -1,0 +1,30 @@
+/* body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('https://cdn.hipwallpaper.com/i/31/76/E8FiYD.jpg');
+  } */
+  .navbar-brand {
+    color: rgb(179, 8, 42);
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-style: italic;
+    font-size: 30px;
+  }
+  .dropdown-menu {
+    background-color: #58D3F7;
+    color: rgb(23, 152, 226);
+    font-size: 20px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  /* .bg-img {
+    background-clip: url("https://media.istockphoto.com/videos/4k-abstract-particle-wave-bokeh-background-blue-water-snow-beautiful-video-id1199496434");
+    height: 730px;
+    width: 1511px;
+    background-size: cover;
+  } */
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
